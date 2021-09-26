@@ -24,3 +24,10 @@ def test_pred_virginica():
         # asserting the correct response is received
         assert response.status_code == 200
         assert response.json() == {"flower_class": "Iris Virginica"}
+def test_kingclac():
+    with TestClient(app) as client:
+        response = client.get("/kingclac")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"kingclac": "operations performed successufully"}
+
